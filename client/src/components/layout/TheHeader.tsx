@@ -105,7 +105,7 @@ export const TheHeader = ({ routes, links }: MyHeaderProps) => {
                rel='noopener noreferrer'
                target='_blank'
             >
-              {link.icon}
+              {link.icon || link.label}
             </a>
           ))}
         </IconContext.Provider>
