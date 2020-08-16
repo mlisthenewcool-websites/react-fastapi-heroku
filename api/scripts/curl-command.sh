@@ -1,0 +1,1 @@
+curl -X POST "http://localhost:5050/token" -H "accept: application/json" -H "Content-Type: application/x-www-form-urlencoded" -d "username=johndoe&password=secret"
