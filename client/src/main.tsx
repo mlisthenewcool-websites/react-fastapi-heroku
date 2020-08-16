@@ -75,7 +75,10 @@ const TheBreadcrumbs = ({ routes }: MyBreadcrumbProps) => {
 
       textAlign: 'center',
       minHeight: '40px',
-      maxHeight: '40px'
+      maxHeight: '40px',
+
+      boxSizing: 'border-box',
+      borderBottom: '3px solid black',
     }}>
       {breadcrumbs.map(({ match, breadcrumb }: BreadcrumbData) => (
         <Link key={match.url} to={match.url}>

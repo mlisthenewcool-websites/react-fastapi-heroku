@@ -85,7 +85,7 @@ export const TheHeader = ({ routes, links }: MyHeaderProps) => {
         flex: 5,
       }}>
         {routes.map((route: MyRouteProps) => (
-          <Link style={{flex: 1}} key={route.path} to={route.path}>
+          <Link style={{padding: '0 10px 0 10px'}} key={route.path} to={route.path}>
             {route.breadcrumb}
           </Link>
         ))}
