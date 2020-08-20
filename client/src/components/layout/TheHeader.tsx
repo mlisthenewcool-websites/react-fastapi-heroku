@@ -67,7 +67,7 @@ export const TheHeader = ({ routes, links }: MyHeaderProps) => {
       alignItems: 'stretch',
 
       height: '80px',
-      backgroundColor: 'yellow',
+      // backgroundColor: 'yellow',
       textAlign: 'center',
 
       boxSizing: 'border-box',

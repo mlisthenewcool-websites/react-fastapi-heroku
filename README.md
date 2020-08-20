@@ -1,15 +1,30 @@
 # Todo
 
+- https://jsfiddle.net/koemw67a/6/
+- https://codeburst.io/part-1-jwt-to-authenticate-downloadable-files-at-client-8e0b979c9ac1d
+
+
 - [ ] flexbox port to pure react
     - [ ] bible : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     - [ ] https://ishadeed.com/article/grid-layout-flexbox-components/
     - [ ] https://github.com/roylee0704/react-flexbox-grid
     - [ ] https://medium.com/better-programming/make-a-flexbox-react-component-e96a038da7ec
     - [ ] https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480
+    - [ ] https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    - [ ] https://github.com/LoicMahieu/react-styled-flexboxgrid/blob/master/src/config.js
 
 - [ ] performances
     - [ ] https://github.com/jamiebuilds/react-loadable
     - [ ] https://reactjs.org/docs/code-splitting.html
+    
+- [ ] performances TODO
+    - [ ] https://search.google.com/test/rich-results?utm_campaign=sdtt&utm_medium=message
+    - [ ] https://loadable-components.com/
+    - [ ] https://web.dev/code-splitting-suspense/?utm_source=lighthouse&utm_medium=lr
+    - [ ] https://web.dev/reduce-javascript-payloads-with-code-splitting/
+    - [ ] https://web.dev/codelab-code-splitting/
+    - [ ] https://web.dev/use-lazysizes-to-lazyload-images/
+    
 
 - [ ] bug scrollbar with sidebar
 - [ ] breadcrumbs self-coded

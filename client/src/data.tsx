@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'; // { lazy }
 import { createGlobalStyle } from 'styled-components';
 import { FaLinkedin, FaEnvelope, FaGithub, FaDev } from 'react-icons/fa';
 
 // import my types, views and main app
-import { About, Notes, Memorial, Projects } from './components/views';
 import GillSansRegular from './assets/fonts/SFUGillSansRegular.woff';
+import { About, Projects, Notes, Memorial } from './components/views';
 
 // used to extends custom theme in order to use
 // `createGlobalStyle` function
@@ -16,7 +16,7 @@ declare module 'styled-components' {
 export const myRoutes: MyRouteProps[] = [
   {
     path: '/',
-    component: About,
+    component: About, //lazy(() => import('./components/views/about/About')),
     exact: true,
     breadcrumb: 'À propos',
     isProtected: false,
