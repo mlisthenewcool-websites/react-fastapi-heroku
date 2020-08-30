@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
 
