@@ -5,6 +5,7 @@ from typing import Optional
 from datetime import datetime, timedelta
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi.responses import FileResponse
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from passlib.context import CryptContext
@@ -173,3 +174,9 @@ async def my_time():
     return {
         'time': time.time()
     }
+
+
+@app.get('/api/memorial/images')
+async def memorial_images():
+    some_file_path = './images/0001.png'
+    return FileResponse(some_file_path)

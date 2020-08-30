@@ -24,7 +24,16 @@
     - [ ] https://web.dev/reduce-javascript-payloads-with-code-splitting/
     - [ ] https://web.dev/codelab-code-splitting/
     - [ ] https://web.dev/use-lazysizes-to-lazyload-images/
-    
+
+- [ ] calendar
+	- [ ] https://github.com/fullcalendar/fullcalendar
+	- [ ] https://github.com/jquense/react-big-calendar
+	- [ ] https://github.com/wojtekmaj/react-calendar#readme
+	- [ ] https://github.com/react-component/calendar
+	- [ ]
+	- [ ]
+	- [ ]
+	
 
 - [ ] bug scrollbar with sidebar
 - [ ] breadcrumbs self-coded

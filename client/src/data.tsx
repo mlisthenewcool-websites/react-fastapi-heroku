@@ -40,7 +40,7 @@ export const myRoutes: MyRouteProps[] = [
     component: Memorial,
     exact: true,
     breadcrumb: 'Mémorial',
-    isProtected: true,
+    isProtected: false,
   },
 ];
 
