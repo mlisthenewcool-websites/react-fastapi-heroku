@@ -26,7 +26,6 @@ ReactDOM.render(
 
       {/* Basically all the things visible for client */}
       <Main routes={myRoutes} links={myLinks} />
-
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

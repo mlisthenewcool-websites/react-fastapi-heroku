@@ -52,12 +52,12 @@ const StyledView = styled(FlexContainer)`
 */
 
 interface MyBreadcrumbProps {
-  routes: MyRouteProps[]
+  routes: MyRouteProps[];
 }
 
 const TheStyledBreadcrumbs = styled.header`
   a + a::before {
-    content: "\\02192";
+    content: '\\02192';
   }
 `;
 
@@ -68,26 +68,28 @@ const TheBreadcrumbs = ({ routes }: MyBreadcrumbProps) => {
   });
 
   return (
-    <TheStyledBreadcrumbs style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+    <TheStyledBreadcrumbs
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
 
-      textAlign: 'center',
-      minHeight: '40px',
-      maxHeight: '40px',
+        textAlign: 'center',
+        minHeight: '40px',
+        maxHeight: '40px',
 
-      boxSizing: 'border-box',
-      borderBottom: '3px solid black',
-    }}>
+        boxSizing: 'border-box',
+        borderBottom: '3px solid black',
+      }}
+    >
       {breadcrumbs.map(({ match, breadcrumb }: BreadcrumbData) => (
         <Link key={match.url} to={match.url}>
           &nbsp;&nbsp;{breadcrumb}&nbsp;&nbsp;
         </Link>
       ))}
     </TheStyledBreadcrumbs>
-  )
-}
+  );
+};
 
 // https://jsfiddle.net/ycsmo8fx/30/
 
@@ -99,13 +101,15 @@ export const Main = ({ routes, links }: MyMainProps) => (
       {/* <TheMenu routes={routes}/> */}
 
       {/* Rendering matched routes */}
-      <main style={{
-        display: 'flex',
-        alignItems: 'stretch',
-        flexDirection: 'column',
+      <main
+        style={{
+          display: 'flex',
+          alignItems: 'stretch',
+          flexDirection: 'column',
 
-        height: 'calc(100vh - 80px)',
-      }}>
+          height: 'calc(100vh - 80px)',
+        }}
+      >
         <TheBreadcrumbs routes={routes} />
         <TheView>
           <Switch>

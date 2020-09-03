@@ -7,14 +7,16 @@ type WithChildren<T = unknown> = T & { children?: React.ReactNode };
 type ContentProps = WithChildren;
 
 export const TheView = ({ children }: ContentProps) => (
-  <main style={{
-    flex: '1',
+  <main
+    style={{
+      flex: '1',
 
-    overflow: 'auto',
-    textAlign: 'justify',
+      overflow: 'auto',
+      textAlign: 'justify',
 
-    padding: '0px 30px 0px 30px'
-  }}>
+      padding: '0px 30px 0px 30px',
+    }}
+  >
     {children}
   </main>
 );

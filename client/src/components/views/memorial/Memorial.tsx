@@ -2,29 +2,27 @@ import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
 import { Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
 
-
 const apiUrl = 'http://0.0.0.0:5050/api/memorial/images';
-
 
 const TheMemorial = () => {
   const { memorialId } = useParams();
 
   const [imageSrc, setImageSrc] = useState<string>('');
 
-  const getImage = async(imageName: string) => {
+  const getImage = async (imageName: string) => {
     fetch(apiUrl)
       .then((response) => {
         if (response.status !== 200) {
-          throw new Error(response.statusText)
+          throw new Error(response.statusText);
         }
-        return response
+        return response;
       })
-      .then(response => response.blob())
-      .then(blob => {
-        console.info(URL.createObjectURL(blob))
-        setImageSrc(URL.createObjectURL(blob))
-      })
-  }
+      .then((response) => response.blob())
+      .then((blob) => {
+        console.info(URL.createObjectURL(blob));
+        setImageSrc(URL.createObjectURL(blob));
+      });
+  };
 
   return (
     <div className='project-container'>
@@ -32,7 +30,7 @@ const TheMemorial = () => {
       <button type='button' onClick={() => getImage('')}>
         Get image
       </button>
-      {imageSrc && <img alt='' src={imageSrc}/>}
+      {imageSrc && <img alt='' src={imageSrc} />}
     </div>
   );
 };

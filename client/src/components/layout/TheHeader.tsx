@@ -58,52 +58,61 @@ const headerChildStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-}
+};
 
 export const TheHeader = ({ routes, links }: MyHeaderProps) => {
   return (
-    <header style={{
-      display: 'flex',
-      alignItems: 'stretch',
+    <header
+      style={{
+        display: 'flex',
+        alignItems: 'stretch',
 
-      height: '80px',
-      // backgroundColor: 'yellow',
-      textAlign: 'center',
+        height: '80px',
+        // backgroundColor: 'yellow',
+        textAlign: 'center',
 
-      boxSizing: 'border-box',
-      borderBottom: '3px solid black',
-    }}>
-      <nav style={{
-        ...headerChildStyle,
-        flex: 3,
-      }}>
+        boxSizing: 'border-box',
+        borderBottom: '3px solid black',
+      }}
+    >
+      <nav
+        style={{
+          ...headerChildStyle,
+          flex: 3,
+        }}
+      >
         <Link to='/'>Hippolyte Debernardi</Link>
       </nav>
 
-      <nav style={{
-        ...headerChildStyle,
-        flex: 5,
-      }}>
+      <nav
+        style={{
+          ...headerChildStyle,
+          flex: 5,
+        }}
+      >
         {routes.map((route: MyRouteProps) => (
-          <Link style={{padding: '0 10px 0 10px'}} key={route.path} to={route.path}>
+          <Link style={{ padding: '0 10px 0 10px' }} key={route.path} to={route.path}>
             {route.breadcrumb}
           </Link>
         ))}
       </nav>
 
-      <nav style={{
-        ...headerChildStyle,
-        flex: 2,
-      }}>
-        <IconContext.Provider value={{className: 'react-icons'}}>
+      <nav
+        style={{
+          ...headerChildStyle,
+          flex: 2,
+        }}
+      >
+        <IconContext.Provider value={{ className: 'react-icons' }}>
           {links.map((link: MyLinkProps) => (
-            <a style={{
-              padding: '5px 5px 0 5px',
-            }}
-               key={link.label}
-               href={link.link}
-               rel='noopener noreferrer'
-               target='_blank'
+            <a
+              style={{
+                padding: '5px 5px 0 5px',
+              }}
+              key={link.label}
+              href={link.link}
+              rel='noopener noreferrer'
+              target='_blank'
             >
               {link.icon || link.label}
             </a>
