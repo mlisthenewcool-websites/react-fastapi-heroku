@@ -56,17 +56,17 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 app = FastAPI()
 
 CORS_ORIGINS = [
-    'http://localhost:3000',
-    'https://hippolyte-debernardi-perso.netlify.app'
+    "http://localhost:3000",
+    "https://hippolyte-debernardi-perso.netlify.app",
 ]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
-    allow_methods=['*'],
-    allow_headers=['*'],
+    allow_methods=["*"],
+    allow_headers=["*"],
     allow_credentials=True,
     expose_headers=[],  # default
-    max_age=600  # default
+    max_age=600,  # default
 )
 
 
@@ -157,26 +157,25 @@ async def read_own_items(current_user: User = Depends(get_current_active_user)):
     return [{"item_id": "Foo", "owner": current_user.username}]
 
 
-@app.get('/api/ok')
+@app.get("/api/ok")
 async def read_root():
     hostname = socket.gethostname()
     version = f"{sys.version_info.major}.{sys.version_info.minor}"
     return {
-        'host': hostname,
-        'version': f"Hello world! From FastAPI running on Uvicorn. "
-                   f"Using Python {version}"
+        "host": hostname,
+        "version": f"Hello world! From FastAPI running on Uvicorn. "
+        f"Using Python {version}",
     }
 
 
-@app.get('/api/time')
+@app.get("/api/time")
 async def my_time():
     import time
-    return {
-        'time': time.time()
-    }
+
+    return {"time": time.time()}
 
 
-@app.get('/api/memorial/images')
+@app.get("/api/memorial/images")
 async def memorial_images():
-    some_file_path = './images/0001.png'
+    some_file_path = "images/0001.png"
     return FileResponse(some_file_path)

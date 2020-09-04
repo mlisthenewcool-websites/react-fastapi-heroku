@@ -87,7 +87,7 @@ export const myLinks: MyLinkProps[] = [
 
 export const myTheme: MyThemeProps = {
   content: {
-    width: '1200px',
+    width: '960px',
   },
 
   header: {

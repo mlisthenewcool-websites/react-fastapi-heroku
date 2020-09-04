@@ -11,7 +11,7 @@ export const TheView = ({ children }: ContentProps) => (
     style={{
       flex: '1',
 
-      overflow: 'auto',
+      // overflow: 'auto',
       textAlign: 'justify',
 
       padding: '0px 30px 0px 30px',
